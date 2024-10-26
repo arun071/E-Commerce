@@ -1,8 +1,0 @@
-{
-  "appsail": [
-    {
-      "source": "D:\\Enterprise Software\\ecommerce-app\\deploy\\backend",
-      "name": "api"
-    }
-  ]
-}
