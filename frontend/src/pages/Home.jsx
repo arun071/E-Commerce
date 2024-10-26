@@ -41,6 +41,7 @@ export default function Home() {
         ) : (
             <>
                 <NavBar />
+                <h1>CI CD DONE</h1>
                 <div className="container-fluid d-flex flex-wrap">
                     {data.map((item, index) => (
                         <div key={index} className="m-2">

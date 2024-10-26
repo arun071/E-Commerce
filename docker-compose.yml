@@ -6,23 +6,23 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: P@ssw0rd
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root_password
-      MYSQL_DATABASE: ecom
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_password
+      MYSQL_DATABASE: product
 
   spring-boot-app:
-      image: arun071/job-portal-backend
+      image: arun071/ecom-backend
       ports:
         - "8080:8080"
       depends_on:
         - mysql
       environment:
-        SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/ecom
-        SPRING_DATASOURCE_USERNAME: root
-        SPRING_DATASOURCE_PASSWORD: root_password
+        SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/product
+        SPRING_DATASOURCE_USERNAME: user
+        SPRING_DATASOURCE_PASSWORD: user_password
       restart: always
 
   react-app:
-      image: arun071/job-portal-frontend
+      image: arun071/ecom-frontend
       ports:
         - "5173:5173"
